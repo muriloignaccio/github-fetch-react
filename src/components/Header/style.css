@@ -1,0 +1,10 @@
+.header {
+  background-color: rgb(65, 63, 63);
+  padding: 20px 0;
+  color: white;
+}
+
+.header_title {
+  margin: 0;
+  text-align: center;
+}
