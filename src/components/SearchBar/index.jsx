@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UsersContext } from "../../contexts/UsersContext";
 import "./style.css";
 
 function SearchBar(props) {
   const [username, setUsername] = useState('');
+
+  const { addAUser } = useContext(UsersContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -10,9 +13,7 @@ function SearchBar(props) {
     const user = await fetch(`https://api.github.com/users/${username}`)
       .then(response => response.json());
 
-    const newUsers = [...props.users, user];
-
-    props.setUsers(newUsers);
+    addAUser(user);
 
     setUsername('');
   }

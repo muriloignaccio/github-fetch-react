@@ -5,18 +5,21 @@ import SearchBar from './components/SearchBar';
 import UserList from './components/UserList';
 
 import './App.css';
+import Container from './components/Container';
 
 function App() {
-  const [users, setUsers] = useState([]);
   return (
     <>
       <Header />
-      <div className="container">
+    
+      <Container>
         <main className="content">
-          <SearchBar users={users} setUsers={setUsers} />
-          <UserList users={users} />
+          <SearchBar />
+          <UserList />
         </main>
-      </div>
+      </Container>
+
+
     </>
   );
 }
