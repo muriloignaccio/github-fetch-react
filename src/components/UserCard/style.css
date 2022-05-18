@@ -1,0 +1,69 @@
+.card {
+  padding: 20px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  position: relative;
+}
+
+.card_header {
+  display: flex;
+}
+
+.card_header img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.card_delete {
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+
+  cursor: pointer;
+  color: rgb(210, 33, 33);
+  transition: filter .3s;
+}
+
+.card_delete:hover {
+  filter: opacity(.7);
+}
+
+.card_info {
+  margin-left: 20px;
+}
+
+.card_name {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.card_username {
+  font-weight: bold;
+    font-size: 14px;
+    color: gray;
+}
+
+.card_body {
+  display: flex;
+  margin-top: 20px;
+}
+
+.github_followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.github_followers .count {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.github_followers .text {
+  color: gray;
+}
